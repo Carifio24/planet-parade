@@ -35,6 +35,19 @@
           }
         }"
       ></font-awesome-icon>
+
+      <slot name="append-icon" class="geocode-icon"></slot>
+
+      <font-awesome-icon
+        class="geocoding-close-icon"
+        v-show="searchOpen && !stayOpen"
+        icon="circle-xmark"
+        :size="searchOpen ? 'xl' : '1x'"
+        color="gray"
+        @click="() => {
+          clearSearchData();
+        }"
+      ></font-awesome-icon>
       
     </div>
     
